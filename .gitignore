@@ -1,0 +1,19 @@
+# Secrets and state — never commit these
+.env
+*.env
+!*.env.example
+
+# Caddy state: contains TLS PRIVATE KEYS for every domain. Never commit.
+caddy_data/
+caddy_config/
+*.key
+*.crt
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Caddyfile backups / host config can leak internal topology
+Caddyfile*
+!Caddyfile.example
